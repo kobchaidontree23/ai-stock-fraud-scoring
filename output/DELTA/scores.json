@@ -1,0 +1,912 @@
+{
+  "ticker": "DELTA",
+  "generated_at": "2026-07-17T21:51:17",
+  "currency": "THB",
+  "year_basis": "Buddhist Era (BE = CE + 543)",
+  "aspect_labels": {
+    "beneish": "Earnings manipulation (Beneish M)",
+    "altman": "Financial distress (Altman Z'')",
+    "accruals": "Accruals & cash quality",
+    "receivables": "Receivable & revenue quality",
+    "leverage": "Leverage & liquidity",
+    "piotroski": "Fundamental health (Piotroski F)",
+    "oneoff": "Non-recurring income reliance",
+    "intangible": "Intangible/asset intensity",
+    "cash_conversion": "Cash conversion (free cash flow)",
+    "governance": "Governance & disclosure",
+    "profitability": "Profitability & margins"
+  },
+  "llm_status": "not_run",
+  "years": [
+    {
+      "year_be": 2561,
+      "year_ce": 2018,
+      "financials": {
+        "cash": 15607754313.0,
+        "receivables": 11558015847.0,
+        "inventory": 9460866572.0,
+        "current_assets": 37987727020.0,
+        "ppe": 7956876239.0,
+        "noncurrent_assets": 10212965687.0,
+        "total_assets": 48200692707.0,
+        "current_liabilities": 12357783556.0,
+        "noncurrent_liabilities": 1901989189.0,
+        "total_liabilities": 14259772745.0,
+        "retained_earnings": 34432010815.0,
+        "total_equity": 33940919962.0,
+        "revenue": 53884504476.0,
+        "sga_selling": 3774259149.0,
+        "sga_admin": 1561394629.0,
+        "total_expenses": 48592805909.0,
+        "pretax_income": 5335008563.0,
+        "net_income": 5126438772.0,
+        "net_income_parent": 5137028684.0,
+        "cogs": 40943970777.0,
+        "depreciation": 1240888458.0,
+        "amortization": 92172978.0,
+        "cfo": 4278525594.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -2.309,
+          "vars": {
+            "DSRI": 1.03,
+            "GMI": 1.127,
+            "AQI": 0.92,
+            "SGI": 1.072,
+            "DEPI": 0.93,
+            "SGAI": 1.162,
+            "LVGI": 1.005,
+            "TATA": 0.018
+          },
+          "score": 34.6,
+          "band": "moderate",
+          "flag": false,
+          "detail": "M=-2.31 (>-2.22 signals likely manipulation); DSRI=1.03, SGI=1.07, TATA=0.018"
+        },
+        "altman": {
+          "available": true,
+          "Z": 9.06,
+          "vars": {
+            "X1": 0.532,
+            "X2": 0.714,
+            "X3": 0.111,
+            "X4": 2.38
+          },
+          "score": 5,
+          "band": "low",
+          "zone": "safe",
+          "detail": "Z''=9.06 (safe); WC/TA=0.53, EBIT/TA=0.11, Eq/Liab=2.38"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": 0.018,
+          "CFO_to_NI": 0.83,
+          "score": 42.3,
+          "band": "moderate",
+          "detail": "accruals/assets=0.018; CFO/NI=0.83"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 78.0,
+          "DSO_prev": 76.0,
+          "recv_growth": 0.104,
+          "rev_growth": 0.072,
+          "score": 28.5,
+          "band": "low",
+          "detail": "DSO=78d vs 76d prior; receivables grew 10% vs revenue 7%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.42,
+          "current_ratio": 3.07,
+          "interest_coverage": null,
+          "score": 12.1,
+          "band": "low",
+          "detail": "D/E=0.42, current ratio=3.07"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 4,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 1,
+            "CFO>0": 1,
+            "dROA>0": 0,
+            "CFO>NI": 0,
+            "dLever_down": 1,
+            "dCurrent_up": 0,
+            "dMargin_up": 0,
+            "dTurnover_up": 1
+          },
+          "score": 50.0,
+          "band": "elevated",
+          "detail": "F=4/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": 0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = 0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 10.0,
+          "band": "low",
+          "opinion": "unqualified",
+          "auditor_firm": "EY",
+          "auditor_license": "3315",
+          "auditor_big4": true,
+          "rotation": null,
+          "related_party_refs": 33,
+          "one_report_sources": [
+            "MANAGEMENT_AND_CG_20190325.DOC"
+          ],
+          "detail": "opinion=unqualified; related-party refs=33"
+        }
+      },
+      "quant_composite": 34.0,
+      "quant_band": "moderate",
+      "quant_mean": 23.9,
+      "quant_severity": 42.3,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": false,
+          "has_kam": true,
+          "emphasis_text": null,
+          "going_concern_text": null,
+          "auditor_license": "3315",
+          "auditor_firm": "EY",
+          "auditor_big4": true,
+          "score": 10,
+          "band": null,
+          "detail": "opinion=unqualified"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 33,
+          "detail": "33 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": false,
+          "sources": [
+            "MANAGEMENT_AND_CG_20190325.DOC"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 34.0,
+      "overall_band": "moderate"
+    },
+    {
+      "year_be": 2562,
+      "year_ce": 2019,
+      "financials": {
+        "cash": 12393643138.0,
+        "receivables": 9739299430.0,
+        "inventory": 8963489681.0,
+        "current_assets": 32378894980.0,
+        "ppe": 11402815640.0,
+        "noncurrent_assets": 13579390026.0,
+        "total_assets": 45958285006.0,
+        "current_liabilities": 10838377323.0,
+        "noncurrent_liabilities": 2113565599.0,
+        "total_liabilities": 12951942922.0,
+        "retained_earnings": 34359240011.0,
+        "total_equity": 33006342084.0,
+        "revenue": 51871823098.0,
+        "sga_selling": 3734355349.0,
+        "sga_admin": 1732913722.0,
+        "total_expenses": 48924399954.0,
+        "finance_cost": -1974468.0,
+        "pretax_income": 2970436552.0,
+        "net_income": 2951662004.0,
+        "net_income_parent": 2959960371.0,
+        "cogs": 40697112008.0,
+        "depreciation": 1628364995.0,
+        "amortization": 104980164.0,
+        "cfo": 5165621394.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -2.774,
+          "vars": {
+            "DSRI": 0.875,
+            "GMI": 1.115,
+            "AQI": 1.012,
+            "SGI": 0.963,
+            "DEPI": 1.08,
+            "SGAI": 1.064,
+            "LVGI": 0.953,
+            "TATA": -0.048
+          },
+          "score": 8,
+          "band": "low",
+          "flag": false,
+          "detail": "M=-2.77 (>-2.22 signals likely manipulation); DSRI=0.88, SGI=0.96, TATA=-0.048"
+        },
+        "altman": {
+          "available": true,
+          "Z": 8.62,
+          "vars": {
+            "X1": 0.469,
+            "X2": 0.748,
+            "X3": 0.065,
+            "X4": 2.548
+          },
+          "score": 5,
+          "band": "low",
+          "zone": "safe",
+          "detail": "Z''=8.62 (safe); WC/TA=0.47, EBIT/TA=0.06, Eq/Liab=2.55"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": -0.047,
+          "CFO_to_NI": 1.75,
+          "score": 13.9,
+          "band": "low",
+          "detail": "accruals/assets=-0.047; CFO/NI=1.75"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 69.0,
+          "DSO_prev": 78.0,
+          "recv_growth": -0.157,
+          "rev_growth": -0.037,
+          "score": 16.8,
+          "band": "low",
+          "detail": "DSO=69d vs 78d prior; receivables grew -16% vs revenue -4%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.39,
+          "current_ratio": 2.99,
+          "interest_coverage": 1505.42,
+          "score": 11.1,
+          "band": "low",
+          "detail": "D/E=0.39, current ratio=2.99, interest cover=1505.4x"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 4,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 1,
+            "CFO>0": 1,
+            "dROA>0": 0,
+            "CFO>NI": 1,
+            "dLever_down": 0,
+            "dCurrent_up": 0,
+            "dMargin_up": 0,
+            "dTurnover_up": 1
+          },
+          "score": 50.0,
+          "band": "elevated",
+          "detail": "F=4/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": 0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = 0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 28.0,
+          "band": "low",
+          "opinion": "unqualified",
+          "auditor_firm": "EY",
+          "auditor_license": "5800",
+          "auditor_big4": true,
+          "rotation": "engagement partner rotated",
+          "related_party_refs": 32,
+          "one_report_sources": [
+            "MANAGEMENT_AND_CG_20200331.DOC"
+          ],
+          "detail": "opinion=unqualified; engagement partner rotated; related-party refs=32"
+        }
+      },
+      "quant_composite": 24.6,
+      "quant_band": "low",
+      "quant_mean": 16.0,
+      "quant_severity": 31.6,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": false,
+          "has_kam": true,
+          "emphasis_text": null,
+          "going_concern_text": null,
+          "auditor_license": "5800",
+          "auditor_firm": "EY",
+          "auditor_big4": true,
+          "score": 10,
+          "band": null,
+          "detail": "opinion=unqualified"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 32,
+          "detail": "32 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": false,
+          "sources": [
+            "MANAGEMENT_AND_CG_20200331.DOC"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 24.6,
+      "overall_band": "low"
+    },
+    {
+      "year_be": 2563,
+      "year_ce": 2020,
+      "financials": {
+        "cash": 13881848304.0,
+        "receivables": 13997068882.0,
+        "inventory": 12655361505.0,
+        "current_assets": 42451729155.0,
+        "ppe": 12724465674.0,
+        "noncurrent_assets": 14767198635.0,
+        "total_assets": 57218927790.0,
+        "current_liabilities": 17170364599.0,
+        "noncurrent_liabilities": 2441134540.0,
+        "total_liabilities": 19611499139.0,
+        "retained_earnings": 39216330187.0,
+        "total_equity": 37607428651.0,
+        "revenue": 64103425857.0,
+        "sga_selling": 4281288560.0,
+        "sga_admin": 1860600002.0,
+        "total_expenses": 57015103825.0,
+        "finance_cost": -1167766.0,
+        "pretax_income": 7259437946.0,
+        "net_income": 7051823523.0,
+        "net_income_parent": 7101638109.0,
+        "cogs": 48089137619.0,
+        "depreciation": 2074517773.0,
+        "amortization": 131801134.0,
+        "cfo": 7233091451.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -2.374,
+          "vars": {
+            "DSRI": 1.163,
+            "GMI": 0.862,
+            "AQI": 0.754,
+            "SGI": 1.236,
+            "DEPI": 0.891,
+            "SGAI": 0.909,
+            "LVGI": 1.216,
+            "TATA": -0.003
+          },
+          "score": 30.7,
+          "band": "moderate",
+          "flag": false,
+          "detail": "M=-2.37 (>-2.22 signals likely manipulation); DSRI=1.16, SGI=1.24, TATA=-0.003"
+        },
+        "altman": {
+          "available": true,
+          "Z": 8.0,
+          "vars": {
+            "X1": 0.442,
+            "X2": 0.685,
+            "X3": 0.127,
+            "X4": 1.918
+          },
+          "score": 5,
+          "band": "low",
+          "zone": "safe",
+          "detail": "Z''=8.00 (safe); WC/TA=0.44, EBIT/TA=0.13, Eq/Liab=1.92"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": -0.004,
+          "CFO_to_NI": 1.03,
+          "score": 31.9,
+          "band": "moderate",
+          "detail": "accruals/assets=-0.004; CFO/NI=1.03"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 80.0,
+          "DSO_prev": 69.0,
+          "recv_growth": 0.437,
+          "rev_growth": 0.236,
+          "score": 37.6,
+          "band": "moderate",
+          "detail": "DSO=80d vs 69d prior; receivables grew 44% vs revenue 24%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.52,
+          "current_ratio": 2.47,
+          "interest_coverage": 6217.52,
+          "score": 12.8,
+          "band": "low",
+          "detail": "D/E=0.52, current ratio=2.47, interest cover=6217.5x"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 6,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 1,
+            "CFO>0": 1,
+            "dROA>0": 1,
+            "CFO>NI": 1,
+            "dLever_down": 1,
+            "dCurrent_up": 0,
+            "dMargin_up": 1,
+            "dTurnover_up": 0
+          },
+          "score": 25.0,
+          "band": "low",
+          "detail": "F=6/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": 0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = 0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 10.0,
+          "band": "low",
+          "opinion": "unqualified",
+          "auditor_firm": "EY",
+          "auditor_license": "5800",
+          "auditor_big4": true,
+          "rotation": "auditor stable",
+          "related_party_refs": 32,
+          "one_report_sources": [
+            "MANAGEMENT_AND_CG_20210331.DOC"
+          ],
+          "detail": "opinion=unqualified; auditor stable; related-party refs=32"
+        }
+      },
+      "quant_composite": 28.0,
+      "quant_band": "low",
+      "quant_mean": 21.3,
+      "quant_severity": 33.4,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": false,
+          "has_kam": true,
+          "emphasis_text": null,
+          "going_concern_text": null,
+          "auditor_license": "5800",
+          "auditor_firm": "EY",
+          "auditor_big4": true,
+          "score": 10,
+          "band": null,
+          "detail": "opinion=unqualified"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 32,
+          "detail": "32 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": false,
+          "sources": [
+            "MANAGEMENT_AND_CG_20210331.DOC"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 28.0,
+      "overall_band": "low"
+    },
+    {
+      "year_be": 2564,
+      "year_ce": 2021,
+      "financials": {
+        "cash": 6571565489.0,
+        "receivables": 20593484448.0,
+        "inventory": 19580654831.0,
+        "current_assets": 48764452792.0,
+        "ppe": 18583129233.0,
+        "noncurrent_assets": 20573921463.0,
+        "total_assets": 69338374255.0,
+        "current_liabilities": 24735733176.0,
+        "noncurrent_liabilities": 3198338382.0,
+        "total_liabilities": 27934071558.0,
+        "retained_earnings": 41776387503.0,
+        "total_equity": 41404302697.0,
+        "revenue": 85778301596.0,
+        "sga_selling": 6280790115.0,
+        "sga_admin": 1989107082.0,
+        "total_expenses": 79027368888.0,
+        "finance_cost": -4027724.0,
+        "pretax_income": 6801044832.0,
+        "net_income": 6703321593.0,
+        "net_income_parent": 6699008329.0,
+        "cogs": 66959906554.0,
+        "depreciation": 2368453335.0,
+        "amortization": 139398206.0,
+        "cfo": 1782209499.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -1.791,
+          "vars": {
+            "DSRI": 1.1,
+            "GMI": 1.139,
+            "AQI": 0.804,
+            "SGI": 1.338,
+            "DEPI": 1.24,
+            "SGAI": 1.006,
+            "LVGI": 1.175,
+            "TATA": 0.071
+          },
+          "score": 69.2,
+          "band": "elevated",
+          "flag": true,
+          "detail": "M=-1.79 (>-2.22 signals likely manipulation); DSRI=1.10, SGI=1.34, TATA=0.071"
+        },
+        "altman": {
+          "available": true,
+          "Z": 6.45,
+          "vars": {
+            "X1": 0.347,
+            "X2": 0.603,
+            "X3": 0.098,
+            "X4": 1.482
+          },
+          "score": 5,
+          "band": "low",
+          "zone": "safe",
+          "detail": "Z''=6.45 (safe); WC/TA=0.35, EBIT/TA=0.10, Eq/Liab=1.48"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": 0.078,
+          "CFO_to_NI": 0.27,
+          "score": 72.0,
+          "band": "high",
+          "detail": "accruals/assets=0.078; CFO/NI=0.27"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 88.0,
+          "DSO_prev": 80.0,
+          "recv_growth": 0.471,
+          "rev_growth": 0.338,
+          "score": 37.1,
+          "band": "moderate",
+          "detail": "DSO=88d vs 80d prior; receivables grew 47% vs revenue 34%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.67,
+          "current_ratio": 1.97,
+          "interest_coverage": 1689.56,
+          "score": 18.0,
+          "band": "low",
+          "detail": "D/E=0.67, current ratio=1.97, interest cover=1689.6x"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 3,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 1,
+            "CFO>0": 1,
+            "dROA>0": 0,
+            "CFO>NI": 0,
+            "dLever_down": 0,
+            "dCurrent_up": 0,
+            "dMargin_up": 0,
+            "dTurnover_up": 1
+          },
+          "score": 62.5,
+          "band": "elevated",
+          "detail": "F=3/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": 0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = 0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 18.0,
+          "band": "low",
+          "opinion": "unqualified",
+          "auditor_firm": "EY",
+          "auditor_license": "5800",
+          "auditor_big4": true,
+          "rotation": "auditor stable",
+          "related_party_refs": 44,
+          "one_report_sources": [
+            "DELTAT1.PDF"
+          ],
+          "detail": "opinion=unqualified; auditor stable; related-party refs=44"
+        }
+      },
+      "quant_composite": 54.3,
+      "quant_band": "elevated",
+      "quant_mean": 37.6,
+      "quant_severity": 67.9,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": false,
+          "has_kam": true,
+          "emphasis_text": null,
+          "going_concern_text": null,
+          "auditor_license": "5800",
+          "auditor_firm": "EY",
+          "auditor_big4": true,
+          "score": 10,
+          "band": null,
+          "detail": "opinion=unqualified"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 44,
+          "detail": "44 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": true,
+          "sources": [
+            "DELTAT1.PDF"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 54.3,
+      "overall_band": "elevated"
+    },
+    {
+      "year_be": 2565,
+      "year_ce": 2022,
+      "financials": {
+        "cash": 10142199773.0,
+        "receivables": 28132399814.0,
+        "inventory": 25048620957.0,
+        "current_assets": 66025109028.0,
+        "ppe": 22699590390.0,
+        "noncurrent_assets": 24959368295.0,
+        "total_assets": 90984477323.0,
+        "current_liabilities": 32669556981.0,
+        "noncurrent_liabilities": 3635158047.0,
+        "total_liabilities": 36304715028.0,
+        "retained_earnings": 55264964435.0,
+        "total_equity": 54679762295.0,
+        "revenue": 119885194125.0,
+        "sga_selling": 7164092328.0,
+        "sga_admin": 2541397159.0,
+        "total_expenses": 104120024227.0,
+        "finance_cost": -19516480.0,
+        "pretax_income": 15811493411.0,
+        "net_income": 15344546582.0,
+        "net_income_parent": 15344546582.0,
+        "cogs": 90617556046.0,
+        "depreciation": 3086654125.0,
+        "amortization": 102882671.0,
+        "cfo": 12193090521.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -2.068,
+          "vars": {
+            "DSRI": 0.977,
+            "GMI": 0.899,
+            "AQI": 0.865,
+            "SGI": 1.398,
+            "DEPI": 0.944,
+            "SGAI": 0.84,
+            "LVGI": 0.99,
+            "TATA": 0.035
+          },
+          "score": 50.4,
+          "band": "elevated",
+          "flag": true,
+          "detail": "M=-2.07 (>-2.22 signals likely manipulation); DSRI=0.98, SGI=1.40, TATA=0.035"
+        },
+        "altman": {
+          "available": true,
+          "Z": 7.14,
+          "vars": {
+            "X1": 0.367,
+            "X2": 0.607,
+            "X3": 0.174,
+            "X4": 1.506
+          },
+          "score": 5,
+          "band": "low",
+          "zone": "safe",
+          "detail": "Z''=7.14 (safe); WC/TA=0.37, EBIT/TA=0.17, Eq/Liab=1.51"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": 0.039,
+          "CFO_to_NI": 0.79,
+          "score": 48.6,
+          "band": "moderate",
+          "detail": "accruals/assets=0.039; CFO/NI=0.79"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 86.0,
+          "DSO_prev": 88.0,
+          "recv_growth": 0.366,
+          "rev_growth": 0.398,
+          "score": 26.5,
+          "band": "low",
+          "detail": "DSO=86d vs 88d prior; receivables grew 37% vs revenue 40%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.66,
+          "current_ratio": 2.02,
+          "interest_coverage": 811.16,
+          "score": 17.5,
+          "band": "low",
+          "detail": "D/E=0.66, current ratio=2.02, interest cover=811.2x"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 7,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 1,
+            "CFO>0": 1,
+            "dROA>0": 1,
+            "CFO>NI": 0,
+            "dLever_down": 1,
+            "dCurrent_up": 1,
+            "dMargin_up": 1,
+            "dTurnover_up": 1
+          },
+          "score": 12.5,
+          "band": "low",
+          "detail": "F=7/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": 0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = 0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 10.0,
+          "band": "low",
+          "opinion": "unqualified",
+          "auditor_firm": "EY",
+          "auditor_license": "5800",
+          "auditor_big4": true,
+          "rotation": "auditor stable",
+          "related_party_refs": 46,
+          "one_report_sources": [
+            "ONEREPORTDELTAT.PDF"
+          ],
+          "detail": "opinion=unqualified; auditor stable; related-party refs=46"
+        }
+      },
+      "quant_composite": 34.1,
+      "quant_band": "moderate",
+      "quant_mean": 24.6,
+      "quant_severity": 41.8,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": false,
+          "has_kam": true,
+          "emphasis_text": null,
+          "going_concern_text": null,
+          "auditor_license": "5800",
+          "auditor_firm": "EY",
+          "auditor_big4": true,
+          "score": 10,
+          "band": null,
+          "detail": "opinion=unqualified"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 46,
+          "detail": "46 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": true,
+          "sources": [
+            "ONEREPORTDELTAT.PDF"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 34.1,
+      "overall_band": "moderate"
+    }
+  ],
+  "source": "local_files"
+}

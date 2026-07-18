@@ -1,0 +1,12 @@
+# raw source filings (large, third-party; re-obtainable from SEC/SET) — see README for layout
+data/
+
+# python
+__pycache__/
+*.pyc
+
+# scratch / ad-hoc debug artifacts
+scratch_*
+
+# local env
+.env

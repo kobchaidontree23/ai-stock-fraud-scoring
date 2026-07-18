@@ -1,0 +1,9 @@
+pandas>=2.0
+xlrd>=2.0            # legacy .xls (OLE2) reading
+openpyxl>=3.1       # .xlsx fallback
+pdfplumber>=0.11    # One Report / 56-1 PDFs
+python-docx>=1.1    # .docx auditor reports & notes
+anthropic>=0.69     # LLM scoring layer (optional at runtime)
+flask>=3.0          # web app
+requests>=2.31      # SEC Open API client
+pywin32>=306 ; platform_system == "Windows"   # legacy .doc via Word COM (optional)

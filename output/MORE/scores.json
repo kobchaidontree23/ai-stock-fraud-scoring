@@ -1,0 +1,901 @@
+{
+  "ticker": "MORE",
+  "generated_at": "2026-07-17T21:52:35",
+  "currency": "THB",
+  "year_basis": "Buddhist Era (BE = CE + 543)",
+  "aspect_labels": {
+    "beneish": "Earnings manipulation (Beneish M)",
+    "altman": "Financial distress (Altman Z'')",
+    "accruals": "Accruals & cash quality",
+    "receivables": "Receivable & revenue quality",
+    "leverage": "Leverage & liquidity",
+    "piotroski": "Fundamental health (Piotroski F)",
+    "oneoff": "Non-recurring income reliance",
+    "intangible": "Intangible/asset intensity",
+    "cash_conversion": "Cash conversion (free cash flow)",
+    "governance": "Governance & disclosure",
+    "profitability": "Profitability & margins"
+  },
+  "llm_status": "not_run",
+  "years": [
+    {
+      "year_be": 2560,
+      "year_ce": 2017,
+      "financials": {
+        "cash": 78352083.0,
+        "receivables": 81468489.0,
+        "current_assets": 271644307.0,
+        "noncurrent_assets": 302269000.0,
+        "total_assets": 573913307.0,
+        "current_liabilities": 390033571.0,
+        "noncurrent_liabilities": 30657720.0,
+        "total_liabilities": 420691291.0,
+        "retained_earnings": -1037950292.0,
+        "total_equity": 153222016.0,
+        "revenue": 1012249911.0,
+        "sga_admin": 145625253.0,
+        "total_expenses": 1252670991.0,
+        "pretax_income": -267802265.0,
+        "net_income": -196284861.0,
+        "net_income_parent": -248775617.0,
+        "cogs": 737081788.0,
+        "depreciation": 24642618.0,
+        "amortization": 10845858.0,
+        "cfo": -55628402.0,
+        "inventory": 93177639.0,
+        "sga_selling": 180391437.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -3.423,
+          "vars": {
+            "DSRI": 0.692,
+            "GMI": 1.015,
+            "AQI": 0.777,
+            "SGI": 1.679,
+            "DEPI": 1.0,
+            "SGAI": 0.534,
+            "LVGI": 1.356,
+            "TATA": -0.245
+          },
+          "score": 8,
+          "band": "low",
+          "flag": false,
+          "detail": "M=-3.42 (>-2.22 signals likely manipulation); DSRI=0.69, SGI=1.68, TATA=-0.245"
+        },
+        "altman": {
+          "available": true,
+          "Z": -10.0,
+          "vars": {
+            "X1": -0.206,
+            "X2": -1.809,
+            "X3": -0.467,
+            "X4": 0.364
+          },
+          "score": 100,
+          "band": "severe",
+          "zone": "distress",
+          "detail": "Z''=-10.00 (distress); WC/TA=-0.21, EBIT/TA=-0.47, Eq/Liab=0.36"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": -0.226,
+          "CFO_to_NI": 0.28,
+          "score": 43.9,
+          "band": "moderate",
+          "detail": "accruals/assets=-0.226; CFO/NI=0.28"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 29.0,
+          "DSO_prev": 42.0,
+          "recv_growth": 0.162,
+          "rev_growth": 0.679,
+          "score": 10.0,
+          "band": "low",
+          "detail": "DSO=29d vs 42d prior; receivables grew 16% vs revenue 68%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 2.75,
+          "current_ratio": 0.7,
+          "interest_coverage": null,
+          "score": 87.2,
+          "band": "severe",
+          "detail": "D/E=2.75, current ratio=0.70"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 5,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 0,
+            "CFO>0": 0,
+            "dROA>0": 1,
+            "CFO>NI": 1,
+            "dLever_down": 1,
+            "dCurrent_up": 1,
+            "dMargin_up": 0,
+            "dTurnover_up": 1
+          },
+          "score": 37.5,
+          "band": "moderate",
+          "detail": "F=5/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": -0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = -0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 100.0,
+          "band": "severe",
+          "opinion": "disclaimer",
+          "auditor_firm": "EY",
+          "auditor_license": "5872",
+          "auditor_big4": true,
+          "rotation": null,
+          "related_party_refs": 36,
+          "one_report_sources": [
+            "MANAGEMENT_AND_CG_20180402.PDF"
+          ],
+          "detail": "opinion=disclaimer; related-party refs=36"
+        }
+      },
+      "quant_composite": 74.4,
+      "quant_band": "high",
+      "quant_mean": 48.2,
+      "quant_severity": 95.7,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "disclaimer",
+          "going_concern": false,
+          "emphasis_of_matter": true,
+          "has_kam": false,
+          "emphasis_text": "ข้อมูลและเหตุการณ์ที่เน้น ข้าพเจ้าขอให้สังเกตเรื่องต่อไปนี้ ก) ตามที่กล่าวในหมายเหตุประกอบงบการเงินรวมข้อ 4.1 เรื่อง การแก้ไขงบการเงินปีก่อนเกี่ยวกับประมาณการหนี้สินจากภาระค้ำประกันให้กับบริษัทแห่งหนึ่ง ข) ตามที่กล่าวในหมายเหตุประกอบงบการเงินรวมข้อ 4.2 เรื่อง การแก้ไขงบการเงิ",
+          "going_concern_text": null,
+          "auditor_license": "5872",
+          "auditor_firm": "EY",
+          "auditor_big4": true,
+          "score": 100,
+          "band": null,
+          "detail": "opinion=disclaimer, emphasis-of-matter"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 36,
+          "detail": "36 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": false,
+          "sources": [
+            "MANAGEMENT_AND_CG_20180402.PDF"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 74.4,
+      "overall_band": "high"
+    },
+    {
+      "year_be": 2561,
+      "year_ce": 2018,
+      "financials": {
+        "cash": 321994463.0,
+        "receivables": 14267874.0,
+        "current_assets": 338954913.0,
+        "noncurrent_assets": 190073324.0,
+        "total_assets": 529028237.0,
+        "current_liabilities": 163622973.0,
+        "noncurrent_liabilities": 3185588.0,
+        "total_liabilities": 166808561.0,
+        "retained_earnings": -895240622.0,
+        "total_equity": 362219676.0,
+        "revenue": 186031362.0,
+        "sga_admin": 53206776.0,
+        "total_expenses": 51919180.0,
+        "pretax_income": 126524484.0,
+        "net_income": 119632699.0,
+        "net_income_parent": 115819142.0,
+        "cogs": 20633587.0,
+        "depreciation": 1541679.0,
+        "amortization": 391820.0,
+        "cfo": -48234767.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -2.056,
+          "vars": {
+            "DSRI": 0.953,
+            "GMI": 0.306,
+            "AQI": 0.682,
+            "SGI": 0.184,
+            "DEPI": 1.0,
+            "SGAI": 0.888,
+            "LVGI": 0.43,
+            "TATA": 0.317
+          },
+          "score": 51.2,
+          "band": "elevated",
+          "flag": true,
+          "detail": "M=-2.06 (>-2.22 signals likely manipulation); DSRI=0.95, SGI=0.18, TATA=0.317"
+        },
+        "altman": {
+          "available": true,
+          "Z": 0.54,
+          "vars": {
+            "X1": 0.331,
+            "X2": -1.692,
+            "X3": 0.239,
+            "X4": 2.171
+          },
+          "score": 75.1,
+          "band": "high",
+          "zone": "distress",
+          "detail": "Z''=0.54 (distress); WC/TA=0.33, EBIT/TA=0.24, Eq/Liab=2.17"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": 0.304,
+          "CFO_to_NI": -0.4,
+          "score": 98.2,
+          "band": "severe",
+          "detail": "accruals/assets=0.304; CFO/NI=-0.40"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 28.0,
+          "DSO_prev": 29.0,
+          "recv_growth": -0.825,
+          "rev_growth": -0.816,
+          "score": 16.4,
+          "band": "low",
+          "detail": "DSO=28d vs 29d prior; receivables grew -82% vs revenue -82%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.46,
+          "current_ratio": 2.07,
+          "interest_coverage": null,
+          "score": 17.2,
+          "band": "low",
+          "detail": "D/E=0.46, current ratio=2.07"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 5,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 1,
+            "CFO>0": 0,
+            "dROA>0": 1,
+            "CFO>NI": 0,
+            "dLever_down": 1,
+            "dCurrent_up": 1,
+            "dMargin_up": 1,
+            "dTurnover_up": 0
+          },
+          "score": 37.5,
+          "band": "moderate",
+          "detail": "F=5/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": 0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = 0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 97.0,
+          "band": "severe",
+          "opinion": "disclaimer",
+          "auditor_firm": "GrantThornton",
+          "auditor_license": "3759",
+          "auditor_big4": false,
+          "rotation": "auditor downgraded EY(Big-4)→GrantThornton",
+          "related_party_refs": 33,
+          "one_report_sources": [
+            "MANAGEMENT_AND_CG_20190401.PDF"
+          ],
+          "detail": "opinion=disclaimer; auditor downgraded EY(Big-4)→GrantThornton; related-party refs=33"
+        }
+      },
+      "quant_composite": 73.0,
+      "quant_band": "high",
+      "quant_mean": 52.0,
+      "quant_severity": 90.1,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "disclaimer",
+          "going_concern": false,
+          "emphasis_of_matter": false,
+          "has_kam": true,
+          "emphasis_text": null,
+          "going_concern_text": null,
+          "auditor_license": "3759",
+          "auditor_firm": "GrantThornton",
+          "auditor_big4": false,
+          "score": 100,
+          "band": null,
+          "detail": "opinion=disclaimer"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 33,
+          "detail": "33 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": false,
+          "sources": [
+            "MANAGEMENT_AND_CG_20190401.PDF"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 73.0,
+      "overall_band": "high"
+    },
+    {
+      "year_be": 2562,
+      "year_ce": 2019,
+      "financials": {
+        "cash": 34062065.0,
+        "receivables": 16644960.0,
+        "current_assets": 99617006.0,
+        "ppe": 15330660.0,
+        "noncurrent_assets": 410138693.0,
+        "total_assets": 509755699.0,
+        "current_liabilities": 164113000.0,
+        "noncurrent_liabilities": 1418826.0,
+        "total_liabilities": 165531826.0,
+        "retained_earnings": -911178688.0,
+        "total_equity": 344223873.0,
+        "revenue": 40312949.0,
+        "sga_admin": 34498199.0,
+        "total_expenses": 55745030.0,
+        "finance_cost": 2768271.0,
+        "pretax_income": -18200352.0,
+        "net_income": -18211458.0,
+        "net_income_parent": -15771211.0,
+        "cogs": 1245814.0,
+        "depreciation": 1458514.0,
+        "amortization": 290310.0,
+        "cfo": -52420275.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": 1.239,
+          "vars": {
+            "DSRI": 5.384,
+            "GMI": 0.917,
+            "AQI": 2.156,
+            "SGI": 0.217,
+            "DEPI": 1.0,
+            "SGAI": 2.992,
+            "LVGI": 1.03,
+            "TATA": 0.067
+          },
+          "score": 100,
+          "band": "severe",
+          "flag": true,
+          "detail": "M=1.24 (>-2.22 signals likely manipulation); DSRI=5.38, SGI=0.22, TATA=0.067"
+        },
+        "altman": {
+          "available": true,
+          "Z": -4.68,
+          "vars": {
+            "X1": -0.127,
+            "X2": -1.787,
+            "X3": -0.03,
+            "X4": 2.08
+          },
+          "score": 100,
+          "band": "severe",
+          "zone": "distress",
+          "detail": "Z''=-4.68 (distress); WC/TA=-0.13, EBIT/TA=-0.03, Eq/Liab=2.08"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": 0.066,
+          "CFO_to_NI": 2.88,
+          "score": 35.1,
+          "band": "moderate",
+          "detail": "accruals/assets=0.066; CFO/NI=2.88"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 151.0,
+          "DSO_prev": 28.0,
+          "recv_growth": 0.167,
+          "rev_growth": -0.783,
+          "score": 70.9,
+          "band": "high",
+          "detail": "DSO=151d vs 28d prior; receivables grew 17% vs revenue -78%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.48,
+          "current_ratio": 0.61,
+          "interest_coverage": -5.57,
+          "score": 69.8,
+          "band": "elevated",
+          "detail": "D/E=0.48, current ratio=0.61, interest cover=-5.6x"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 2,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 0,
+            "CFO>0": 0,
+            "dROA>0": 0,
+            "CFO>NI": 0,
+            "dLever_down": 1,
+            "dCurrent_up": 0,
+            "dMargin_up": 1,
+            "dTurnover_up": 0
+          },
+          "score": 75.0,
+          "band": "high",
+          "detail": "F=2/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": -0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = -0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 28,
+          "band": "low",
+          "opinion": "unqualified",
+          "auditor_firm": "GrantThornton",
+          "auditor_license": "3759",
+          "auditor_big4": false,
+          "rotation": "auditor stable",
+          "related_party_refs": 27,
+          "one_report_sources": [
+            "MANAGEMENT_AND_CG_20200409.PDF"
+          ],
+          "detail": "opinion=unqualified; auditor stable; related-party refs=27"
+        }
+      },
+      "quant_composite": 79.2,
+      "quant_band": "high",
+      "quant_mean": 63.9,
+      "quant_severity": 91.7,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": false,
+          "has_kam": true,
+          "emphasis_text": null,
+          "going_concern_text": null,
+          "auditor_license": "3759",
+          "auditor_firm": "GrantThornton",
+          "auditor_big4": false,
+          "score": 10,
+          "band": null,
+          "detail": "opinion=unqualified"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 27,
+          "detail": "27 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": false,
+          "sources": [
+            "MANAGEMENT_AND_CG_20200409.PDF"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 79.2,
+      "overall_band": "high"
+    },
+    {
+      "year_be": 2563,
+      "year_ce": 2020,
+      "financials": {
+        "cash": 4897057.0,
+        "receivables": 22233378.0,
+        "current_assets": 59037649.0,
+        "ppe": 15278730.0,
+        "noncurrent_assets": 471325267.0,
+        "total_assets": 530362916.0,
+        "current_liabilities": 230947826.0,
+        "noncurrent_liabilities": 3966751.0,
+        "total_liabilities": 234914577.0,
+        "retained_earnings": -958400650.0,
+        "total_equity": 295448339.0,
+        "revenue": 42269322.0,
+        "sga_admin": 35696492.0,
+        "total_expenses": 89040522.0,
+        "finance_cost": 1962914.0,
+        "pretax_income": -48734114.0,
+        "net_income": -48775534.0,
+        "net_income_parent": -47221962.0,
+        "cogs": 23478507.0,
+        "depreciation": 2093930.0,
+        "amortization": 506540.0,
+        "cfo": 47623085.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": -2.516,
+          "vars": {
+            "DSRI": 1.274,
+            "GMI": 2.18,
+            "AQI": 1.11,
+            "SGI": 1.049,
+            "DEPI": 0.721,
+            "SGAI": 0.987,
+            "LVGI": 1.364,
+            "TATA": -0.182
+          },
+          "score": 22.1,
+          "band": "low",
+          "flag": false,
+          "detail": "M=-2.52 (>-2.22 signals likely manipulation); DSRI=1.27, SGI=1.05, TATA=-0.182"
+        },
+        "altman": {
+          "available": true,
+          "Z": -7.29,
+          "vars": {
+            "X1": -0.324,
+            "X2": -1.807,
+            "X3": -0.088,
+            "X4": 1.258
+          },
+          "score": 100,
+          "band": "severe",
+          "zone": "distress",
+          "detail": "Z''=-7.29 (distress); WC/TA=-0.32, EBIT/TA=-0.09, Eq/Liab=1.26"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": -0.185,
+          "CFO_to_NI": -0.98,
+          "score": 46.0,
+          "band": "moderate",
+          "detail": "accruals/assets=-0.185; CFO/NI=-0.98"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 192.0,
+          "DSO_prev": 151.0,
+          "recv_growth": 0.336,
+          "rev_growth": 0.049,
+          "score": 68.8,
+          "band": "elevated",
+          "detail": "DSO=192d vs 151d prior; receivables grew 34% vs revenue 5%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.8,
+          "current_ratio": 0.26,
+          "interest_coverage": -23.83,
+          "score": 75.9,
+          "band": "high",
+          "detail": "D/E=0.80, current ratio=0.26, interest cover=-23.8x"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 3,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 0,
+            "CFO>0": 1,
+            "dROA>0": 0,
+            "CFO>NI": 1,
+            "dLever_down": 0,
+            "dCurrent_up": 0,
+            "dMargin_up": 0,
+            "dTurnover_up": 1
+          },
+          "score": 62.5,
+          "band": "elevated",
+          "detail": "F=3/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": -0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = -0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 46.0,
+          "band": "moderate",
+          "opinion": "unqualified",
+          "auditor_firm": "GrantThornton",
+          "auditor_license": "7305",
+          "auditor_big4": false,
+          "rotation": "engagement partner rotated",
+          "related_party_refs": 31,
+          "one_report_sources": [
+            "102000_t_25640325.pdf"
+          ],
+          "detail": "opinion=unqualified; engagement partner rotated; related-party refs=31"
+        }
+      },
+      "quant_composite": 69.2,
+      "quant_band": "elevated",
+      "quant_mean": 54.0,
+      "quant_severity": 81.6,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": true,
+          "has_kam": true,
+          "emphasis_text": "ข้อมูลและเหตุการณ์ที่เน้น ข้าพเจ้าขอให้สังเกตหมายเหตุประกอบงบการเงินข้อ 2.1 เนื่องด้วยผลกระทบจากสถานการณ์การแพร่ระบาดของโรคติดเชื้อไวรัสโคโรนา 2019 บริษัทและบริษัทย่อยได้จัดทำข้อมูลทางการเงินสำหรับปีสิ้นสุดวันที่ 31 ธันวาคม 2563 โดยเลือกนำแนวปฏิบัติทางการบัญชี เรื่อง มาตรการผ่อนป",
+          "going_concern_text": null,
+          "auditor_license": "7305",
+          "auditor_firm": "GrantThornton",
+          "auditor_big4": false,
+          "score": 50,
+          "band": null,
+          "detail": "opinion=unqualified, emphasis-of-matter"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 31,
+          "detail": "31 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": true,
+          "sources": [
+            "102000_t_25640325.pdf"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 69.2,
+      "overall_band": "elevated"
+    },
+    {
+      "year_be": 2564,
+      "year_ce": 2021,
+      "financials": {
+        "cash": 7815833.0,
+        "receivables": 21364807.0,
+        "current_assets": 48389652.0,
+        "ppe": 44489354.0,
+        "noncurrent_assets": 1579733346.0,
+        "total_assets": 1628122998.0,
+        "current_liabilities": 169308337.0,
+        "noncurrent_liabilities": 3716582.0,
+        "total_liabilities": 173024919.0,
+        "retained_earnings": 200270963.0,
+        "total_equity": 1455098079.0,
+        "revenue": 1297525878.0,
+        "sga_admin": 41644247.0,
+        "total_expenses": 136345861.0,
+        "finance_cost": 2692717.0,
+        "pretax_income": 1158487300.0,
+        "net_income": 1157698458.0,
+        "net_income_parent": 1158671613.0,
+        "cogs": 100363523.0,
+        "depreciation": 3172801.0,
+        "amortization": 889744.0,
+        "cfo": -619939.0
+      },
+      "aspects": {
+        "beneish": {
+          "available": true,
+          "M": 26.72,
+          "vars": {
+            "DSRI": 0.031,
+            "GMI": 0.482,
+            "AQI": 1.097,
+            "SGI": 30.697,
+            "DEPI": 1.811,
+            "SGAI": 0.038,
+            "LVGI": 0.24,
+            "TATA": 0.711
+          },
+          "score": 100,
+          "band": "severe",
+          "flag": true,
+          "detail": "M=26.72 (>-2.22 signals likely manipulation); DSRI=0.03, SGI=30.70, TATA=0.711"
+        },
+        "altman": {
+          "available": true,
+          "Z": 13.54,
+          "vars": {
+            "X1": -0.074,
+            "X2": 0.123,
+            "X3": 0.713,
+            "X4": 8.41
+          },
+          "score": 5,
+          "band": "low",
+          "zone": "safe",
+          "detail": "Z''=13.54 (safe); WC/TA=-0.07, EBIT/TA=0.71, Eq/Liab=8.41"
+        },
+        "accruals": {
+          "available": true,
+          "TATA": 1.073,
+          "CFO_to_NI": -0.0,
+          "score": 100.0,
+          "band": "severe",
+          "detail": "accruals/assets=1.073; CFO/NI=-0.00"
+        },
+        "receivables": {
+          "available": true,
+          "DSO_days": 6.0,
+          "DSO_prev": 192.0,
+          "recv_growth": -0.039,
+          "rev_growth": 29.697,
+          "score": 10.0,
+          "band": "low",
+          "detail": "DSO=6d vs 192d prior; receivables grew -4% vs revenue 2970%"
+        },
+        "leverage": {
+          "available": true,
+          "debt_to_equity": 0.12,
+          "current_ratio": 0.29,
+          "interest_coverage": 431.23,
+          "score": 40.0,
+          "band": "moderate",
+          "detail": "D/E=0.12, current ratio=0.29, interest cover=431.2x"
+        },
+        "piotroski": {
+          "available": true,
+          "F": 6,
+          "components": 8,
+          "detail_components": {
+            "ROA>0": 1,
+            "CFO>0": 0,
+            "dROA>0": 1,
+            "CFO>NI": 0,
+            "dLever_down": 1,
+            "dCurrent_up": 1,
+            "dMargin_up": 1,
+            "dTurnover_up": 1
+          },
+          "score": 25.0,
+          "band": "low",
+          "detail": "F=6/8 healthy checks passed"
+        },
+        "oneoff": {
+          "available": true,
+          "oneoff_to_pretax": 0.0,
+          "bargain_purchase_gain": 0,
+          "score": 8,
+          "band": "low",
+          "detail": "non-recurring gains = 0% of pre-tax profit"
+        },
+        "intangible": {
+          "available": false
+        },
+        "cash_conversion": {
+          "available": false
+        },
+        "governance": {
+          "available": true,
+          "score": 46.0,
+          "band": "moderate",
+          "opinion": "unqualified",
+          "auditor_firm": "GrantThornton",
+          "auditor_license": "5113",
+          "auditor_big4": false,
+          "rotation": "engagement partner rotated",
+          "related_party_refs": 37,
+          "one_report_sources": [
+            "MORET1.PDF"
+          ],
+          "detail": "opinion=unqualified; engagement partner rotated; related-party refs=37"
+        }
+      },
+      "quant_composite": 65.4,
+      "quant_band": "elevated",
+      "quant_mean": 45.1,
+      "quant_severity": 82.0,
+      "documents": {
+        "auditor": {
+          "available": true,
+          "opinion": "unqualified",
+          "going_concern": false,
+          "emphasis_of_matter": true,
+          "has_kam": true,
+          "emphasis_text": "ข้อมูลและเหตุการณ์ที่เน้น ข้าพเจ้าขอให้สังเกตหมายเหตุประกอบข้อ 24 การเปิดเผยข้อมูลที่สำคัญเกี่ยวกับสัญญาจะซื้อจะขายผลิตภัณฑ์แร่กรองน้ำไพโรลูไซต์ เกี่ยวกับหลักประกันการปฏิบัติตามสัญญาในขณะทำสัญญาบริษัทตกลงจะวางหลักประกันให้กับผู้ขายมูลค่า 100.00 ล้านบาท มามอบให้แก่ผู้จะขายเพื่อเป็",
+          "going_concern_text": null,
+          "auditor_license": "5113",
+          "auditor_firm": "GrantThornton",
+          "auditor_big4": false,
+          "score": 50,
+          "band": null,
+          "detail": "opinion=unqualified, emphasis-of-matter"
+        },
+        "related_party": {
+          "available": true,
+          "related_party_mentions": 37,
+          "detail": "37 related-party references in notes"
+        },
+        "one_report": {
+          "available": true,
+          "related_party_mentions": 0,
+          "combined": true,
+          "sources": [
+            "MORET1.PDF"
+          ]
+        }
+      },
+      "llm": {
+        "available": false,
+        "reason": "llm disabled"
+      },
+      "overall_score": 65.4,
+      "overall_band": "elevated"
+    }
+  ],
+  "source": "local_files"
+}
